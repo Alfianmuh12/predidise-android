@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       tools:context=".DetailActivity">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/constraintLayout"
+           android:layout_width="match_parent"
+           android:layout_height="260dp"
+           android:background="@drawable/rectangle_background"
+           app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent">
+
+           <ImageView
+               android:id="@+id/imageView3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:scaleType="centerCrop"
+               android:src="@drawable/sample_detail"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               android:contentDescription="@string/image" />
+
+           <ImageView
+               android:id="@+id/iv_back"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="16dp"
+               android:scaleType="centerCrop"
+               android:src="@drawable/ic_back"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               android:contentDescription="@string/image" />
+
+           <ToggleButton
+               android:id="@+id/toggle_fav"
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:layout_marginTop="16dp"
+               android:backgroundTint="@color/gray"
+               android:layout_marginEnd="16dp"
+               android:background="@drawable/fav_toggle"
+               android:focusable="false"
+               android:focusableInTouchMode="false"
+               android:textOff=""
+               android:textOn=""
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/constraintLayout2"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@color/white"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+           <TextView
+               android:id="@+id/nameLocation"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="8dp"
+               android:layout_marginEnd="16dp"
+               android:fontFamily="@font/montserrat_semibold"
+               android:textColor="@color/dark_blue"
+               android:textSize="24sp"
+               app:layout_constraintEnd_toStartOf="@+id/imageView5"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               tools:text="Candi" />
+
+
+           <TextView
+               android:id="@+id/addressLocation"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="8dp"
+               android:fontFamily="@font/roboto_mediumitalic"
+               android:textColor="@color/dark_blue"
+               android:textSize="16sp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/nameLocation"
+               tools:text="Sleman, Yogyakarta" />
+
+           <TextView
+               android:id="@+id/tv_description"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="16dp"
+               android:layout_marginEnd="16dp"
+               android:fontFamily="@font/montserrat_regular"
+               android:text="@string/description"
+               android:textColor="@color/dark_blue"
+               android:textSize="16sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/addressLocation" />
+
+
+
+           <TextView
+               android:id="@+id/rattingLocation"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="8dp"
+               android:layout_marginEnd="16dp"
+               android:fontFamily="@font/montserrat_semibold"
+               android:textColor="@color/dark_blue"
+               android:textSize="20sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               tools:text="4.9" />
+
+           <ImageView
+               android:id="@+id/imageView5"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_marginTop="8dp"
+               android:src="@drawable/ic_star_active"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintEnd_toStartOf="@+id/rattingLocation"
+               app:layout_constraintTop_toTopOf="parent"
+               android:contentDescription="@string/image" />
+
+           <TextView
+               android:id="@+id/priceLocation"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="16dp"
+               android:fontFamily="@font/montserrat_regular"
+               android:textColor="@color/dark_blue"
+               android:textSize="16sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="@id/addressLocation"
+               tools:text="Rp.5000" />
+
+           <ProgressBar
+               android:id="@+id/progressBarDetail"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_margin="16dp"
+               android:visibility="visible"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.498"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintVertical_bias="0.195" />
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:background="@color/gray"
+               android:id="@+id/recyclerView"
+               android:layout_width="0dp"
+               android:layout_height="250dp"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="24dp"
+               android:layout_marginEnd="16dp"
+               android:orientation="horizontal"
+               app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="1.0"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tv_description"
+               tools:listitem="@layout/list_review" />
+
+           <com.google.android.material.floatingactionbutton.FloatingActionButton
+               android:id="@+id/btn_Add"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@color/white"
+               android:src="@drawable/ic_add"
+               app:layout_constraintEnd_toEndOf="@+id/recyclerView"
+               app:layout_constraintTop_toTopOf="@+id/recyclerView"
+               android:contentDescription="@string/image" />
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/btn_maps"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginEnd="16dp"
+               android:layout_marginBottom="16dp"
+               android:autoLink="map"
+               android:background="@drawable/button_rg"
+               android:fontFamily="@font/montserrat_semibold"
+               android:text="@string/direction"
+               android:textColor="@color/white"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.0"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

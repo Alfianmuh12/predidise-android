@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_favorite"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_background"
+    android:layout_marginEnd="16dp"
+    android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="20dp"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_place"
+            android:layout_width="220dp"
+            android:layout_height="240dp"
+            android:contentDescription="@string/image"
+            android:scaleType="fitXY"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/sample_detail" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rectangle_background"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent">
+
+
+            <TextView
+                android:id="@+id/nameLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
+                card_view:layout_constraintEnd_toStartOf="@+id/imageView6"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/namePlace" />
+
+            <TextView
+                android:id="@+id/ratting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                tools:text="49" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@string/image"
+                android:src="@drawable/ic_star_active"
+                android:visibility="visible"
+                card_view:layout_constraintEnd_toStartOf="@+id/ratting"
+                card_view:layout_constraintTop_toTopOf="@+id/ratting" />
+
+            <TextView
+                android:id="@+id/addressLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/dark_blue"
+                android:textSize="10sp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="@+id/nameLocation"
+                card_view:layout_constraintTop_toBottomOf="@+id/nameLocation"
+                tools:text="@string/addressLocation" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome"
+    tools:context=".login.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:padding="24dp"
+
+        android:background="@drawable/rectangle_background"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/welcome_back"
+            android:textColor="@color/dark_blue"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/email_address"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <com.aplikasi.capstone.customview.CustomEmailEditText
+            android:id="@+id/edt_email"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/rectangle_bordir"
+            android:hint="@string/hint_email"
+            android:paddingStart="16dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/password"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+        <com.aplikasi.capstone.customview.CustomPassEditText
+            android:id="@+id/edt_password"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/rectangle_bordir"
+            android:hint="@string/hint_email"
+            android:paddingStart="16dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/log_in"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textAllCaps="false"
+            android:background="@drawable/button_rg"
+            app:layout_constraintTop_toBottomOf="@+id/edt_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/to_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/create_account"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_button" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

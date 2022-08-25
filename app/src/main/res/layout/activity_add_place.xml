@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".add.AddPlaceActivity">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/image" />
+
+    <ImageView
+        android:id="@+id/previewImageView"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/ic_baseline_image_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/image" />
+
+    <ImageView
+        android:id="@+id/iv_gallery"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_gallery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/previewImageView"
+        android:contentDescription="@string/image" />
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/Name"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_gallery" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_nama"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_nama"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_bordir"
+            android:gravity="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/description"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_nama" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_description"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_bordir"
+            android:gravity="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/category"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_description" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_category"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_bordir"
+            android:gravity="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/City"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_category" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_city"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/City"
+        app:layout_constraintStart_toStartOf="@id/layout_description"
+        app:layout_constraintTop_toBottomOf="@+id/city">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_bordir"
+            android:gravity="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/price"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_city"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_price"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/price"
+        app:layout_constraintStart_toStartOf="@id/layout_description"
+        app:layout_constraintTop_toBottomOf="@+id/price">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_bordir"
+            android:gravity="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/uploadButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rectagle_button"
+        android:text="@string/upload"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/layout_nama"
+        app:layout_constraintStart_toStartOf="@id/layout_nama" />
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/rating"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/layout_category"
+        app:layout_constraintTop_toBottomOf="@+id/layout_category" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:max="5"
+        android:rating="0"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"
+        app:layout_constraintStart_toEndOf="@+id/layout_city"
+        app:layout_constraintTop_toBottomOf="@+id/rating" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
